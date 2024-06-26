@@ -1,64 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="StyledTextReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30" uuid="a09ddd1e-7e89-4662-a387-e53a71b2e0fe">
-
+	<style name="FixSizeFontStyle" isDefault="true" fontName="Ubuntu" fontSize="14" isPdfEmbedded="true"/>
+	<parameter name="ReportTitle" class="java.lang.String"/>
+	<parameter name="FilterClause" class="java.lang.String"/>
+	<parameter name="OrderClause" class="java.lang.String"/>
 	<field name="name" class="java.lang.String"/>
 	<field name="country" class="java.lang.String"/>
 
+	<title>
+		<band height="50">
+			<image>
+				<reportElement x="0" y="0" width="150" height="40" uuid="e37c3ef3-010c-482b-965e-a48565d5736d"/>
+				<imageExpression><![CDATA["report_logo.png"]]></imageExpression>
+			</image>
+
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" x="0" y="0" width="760" height="42" uuid="8e28dd43-c5b6-46a7-aff2-e52c32250ee3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{ReportTitle}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+
 	<columnHeader>
-		<band height="23">
+		<band height="30">
 			<staticText>
-				<reportElement mode="Opaque" x="0" y="3" width="535" height="15" backcolor="#70A9A9"/>
-				<box>
-					<bottomPen lineWidth="1.0" lineColor="#CCCCCC"/>
-				</box>
-				<textElement/>
-				<text><![CDATA[]]> </text>
-			</staticText>
-
-			<staticText>
-				<reportElement x="414" y="3" width="121" height="15"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[Страна]]></text>
-			</staticText>
-
-			<staticText>
-				<reportElement x="0" y="3" width="136" height="15"/>
+				<reportElement x="0" y="3" width="200" height="25"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Имя]]></text>
+			</staticText>
+
+			<staticText>
+				<reportElement x="414" y="3" width="200" height="25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Страна]]></text>
 			</staticText>
 		</band>
 	</columnHeader>
 
 	<detail>
 		<band height="16">
-			<staticText>
-				<reportElement mode="Opaque" x="0" y="0" width="535" height="14" backcolor="#E5ECF9"/>
-				<box>
-					<bottomPen lineWidth="0.25" lineColor="#CCCCCC"/>
-				</box>
-				<textElement/>
-				<text><![CDATA[]]> </text>
-			</staticText>
-
-			<textField>
-				<reportElement x="414" y="0" width="121" height="15"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="9"/>
-				</textElement>
-				<textFieldExpression class="java.lang.String">
-					<![CDATA[$F{country}]]>
-				</textFieldExpression>
-			</textField>
-
-			<textField>
-				<reportElement x="0" y="0" width="136" height="15"/>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="0" y="0" width="200" height="15"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<textFieldExpression class="java.lang.String">
 					<![CDATA[$F{name}]]>
+				</textFieldExpression>
+			</textField>
+
+			<textField textAdjust="StretchHeight">
+				<reportElement x="414" y="0" width="200" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String">
+					<![CDATA[$F{country}]]>
 				</textFieldExpression>
 			</textField>
 		</band>
