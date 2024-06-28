@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="StyledTextReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30" uuid="a09ddd1e-7e89-4662-a387-e53a71b2e0fe">
-<!--	<style name="FixSizeFontStyle" isDefault="true" fontName="Ubuntu" fontSize="14" isPdfEmbedded="true"/>-->
-<!--	<style name="DejaVuSans" isDefault="true" pdfFontName="DejaVuSans.ttf" fontSize="10.0" isBold="false" isItalic="false"-->
-<!--		   isUnderline="false" isStrikeThrough="false"/>-->
-	<style name="TahomaStyle" isDefault="true" mode="Transparent" fontName="Arial" fontSize="14" pdfFontName="Arial" pdfEncoding="cp1251" isPdfEmbedded="true"/>
-	<parameter name="ReportTitle" class="java.lang.String"/>
-	<parameter name="FilterClause" class="java.lang.String"/>
-	<parameter name="OrderClause" class="java.lang.String"/>
-	<field name="name" class="java.lang.String"/>
-	<field name="country" class="java.lang.String"/>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="StyledTextReport" uuid="a09ddd1e-7e89-4662-a387-e53a71b2e0fe">
+	<style name="DefaultFont" isDefault="true" mode="Transparent" fontName="DejaVuSans" fontSize="14" pdfEncoding="CP1251"/>
+	<parameter name="REPORT_TITLE"/>
+	<field name="name"/>
+	<field name="country"/>
 
 	<title>
 		<band height="50">
@@ -20,7 +15,7 @@
 			<textField pattern="" isBlankWhenNull="true">
 				<reportElement key="textField" x="0" y="0" width="760" height="42" uuid="8e28dd43-c5b6-46a7-aff2-e52c32250ee3"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$P{ReportTitle}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{REPORT_TITLE}]]></textFieldExpression>
 			</textField>
 		</band>
 	</title>

@@ -8,7 +8,6 @@ public class DataBeanList {
 
         dataBeanList.add(produce("Manisha", "India"));
         dataBeanList.add(produce("Вася Иванов", "Китай"));
-        dataBeanList.add(produce("12345", "!@#$%^&*()"));
         dataBeanList.add(produce("Dennis Ritchie", "USA"));
         dataBeanList.add(produce("V.Anand", "India"));
         dataBeanList.add(produce("Shrinath", "Brazil"));
