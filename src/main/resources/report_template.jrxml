@@ -1,63 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="StyledTextReport" uuid="a09ddd1e-7e89-4662-a387-e53a71b2e0fe">
-	<style name="DefaultFont" isDefault="true" mode="Transparent" fontName="DejaVuSans" fontSize="14" pdfEncoding="CP1251"/>
-	<parameter name="REPORT_TITLE"/>
-	<field name="name"/>
-	<field name="country"/>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="StyledTextReport" uuid="a09ddd1e-7e89-4662-a387-e53a71b2e0fe">
+    <style name="DefaultFont" isDefault="true" mode="Transparent" fontName="DejaVuSans" fontSize="14"
+           pdfEncoding="CP1251"/>
+    <parameter name="REPORT_TITLE"/>
+    <field name="name"/>
+    <field name="country"/>
 
-	<title>
-		<band height="50">
-			<image>
-				<reportElement x="0" y="0" width="150" height="40" uuid="e37c3ef3-010c-482b-965e-a48565d5736d"/>
-				<imageExpression><![CDATA["report_logo.png"]]></imageExpression>
-			</image>
+    <title>
+        <band height="100">
+            <image>
+                <reportElement x="0" y="0" width="50" height="50" uuid="e37c3ef3-010c-482b-965e-a48565d5736d"/>
+                <imageExpression><![CDATA["report_logo.png"]]></imageExpression>
+            </image>
 
-			<textField pattern="" isBlankWhenNull="true">
-				<reportElement key="textField" x="0" y="0" width="760" height="42" uuid="8e28dd43-c5b6-46a7-aff2-e52c32250ee3"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$P{REPORT_TITLE}]]></textFieldExpression>
-			</textField>
-		</band>
-	</title>
+            <textField pattern="" isBlankWhenNull="true">
+                <reportElement key="textField" x="80" y="0" width="500" height="50"
+                               uuid="8e28dd43-c5b6-46a7-aff2-e52c32250ee3"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font isBold="true" size="20"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{REPORT_TITLE}]]></textFieldExpression>
+            </textField>
+        </band>
+    </title>
 
-	<columnHeader>
-		<band height="30">
-			<staticText>
-				<reportElement x="0" y="3" width="200" height="25"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[Имя]]></text>
-			</staticText>
+    <columnHeader>
+        <band height="30">
+            <staticText>
+                <reportElement x="0" y="0" width="200" height="30"/>
+                <textElement textAlignment="Center" verticalAlignment="Top">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Имя]]></text>
+            </staticText>
 
-			<staticText>
-				<reportElement x="414" y="3" width="200" height="25"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[Страна]]></text>
-			</staticText>
-		</band>
-	</columnHeader>
+            <staticText>
+                <reportElement x="210" y="0" width="330" height="30"/>
+                <textElement textAlignment="Center" verticalAlignment="Top">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Адрес]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
 
-	<detail>
-		<band height="16">
-			<textField textAdjust="StretchHeight">
-				<reportElement x="0" y="0" width="200" height="15"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression class="java.lang.String">
-					<![CDATA[$F{name}]]>
-				</textFieldExpression>
-			</textField>
+    <detail>
+        <band height="30">
+            <textField textAdjust="StretchHeight">
+                <reportElement x="0" y="0" width="200" height="30"/>
+                <textElement textAlignment="Center" verticalAlignment="Top"/>
+                <textFieldExpression class="java.lang.String">
+                    <![CDATA[$F{name}]]>
+                </textFieldExpression>
+            </textField>
 
-			<textField textAdjust="StretchHeight">
-				<reportElement x="414" y="0" width="200" height="15"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression class="java.lang.String">
-					<![CDATA[$F{country}]]>
-				</textFieldExpression>
-			</textField>
-		</band>
-	</detail>
+            <textField textAdjust="StretchHeight">
+                <reportElement x="210" y="0" width="330" height="30"/>
+                <textElement textAlignment="Center" verticalAlignment="Top"/>
+                <textFieldExpression class="java.lang.String">
+                    <![CDATA[$F{country}]]>
+                </textFieldExpression>
+            </textField>
+        </band>
+    </detail>
 
 </jasperReport>
