@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="StyledTextReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30" uuid="a09ddd1e-7e89-4662-a387-e53a71b2e0fe">
-	<style name="DefaultFont" isDefault="true" mode="Transparent" fontName="DejaVuSans" fontSize="12" pdfEncoding="CP1251"/>
+	<template><![CDATA["styles.jrtx"]]></template>
+
 	<parameter name="OPEN_ACCREDITATION_NAME" class="java.lang.String"/>
 	<parameter name="ORGANIZER" class="java.lang.String"/>
 	<parameter name="CATEGORIES" class="java.lang.String"/>
@@ -24,26 +25,23 @@
 					<imageExpression><![CDATA["report_logo.png"]]></imageExpression>
 				</image>
 				<textField isBlankWhenNull="true">
-					<reportElement key="textField" x="00" y="70" width="595" height="50" uuid="8e28dd43-c5b6-46a7-aff2-e52c32250ee3"/>
-					<textElement textAlignment="Left" verticalAlignment="Middle">
-						<font isBold="true"/>
-					</textElement>
+					<reportElement style="ReportHeader" x="0" y="70" width="570" height="60" uuid="8e28dd43-c5b6-46a7-aff2-e52c32250ee3"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA[$P{REPORT_TITLE}]]></textFieldExpression>
 				</textField>
 			</elementGroup>
 			<elementGroup>
 				<staticText>
-					<reportElement x="0" y="130" width="552" height="20" uuid="1d2f6d21-ecf6-4127-806b-543bed0fbf33"/>
-					<textElement>
-						<font isBold="true"/>
-					</textElement>
+					<reportElement style="BlockHeader" x="0" y="130" width="552" height="20" uuid="1d2f6d21-ecf6-4127-806b-543bed0fbf33"/>
 					<text><![CDATA[Открытая аккредитация]]></text>
 				</staticText>
 			</elementGroup>
 
 			<elementGroup>
 				<staticText>
-					<reportElement positionType="Float" stretchType="ElementGroupHeight" mode="Transparent" x="0" y="150" width="185" height="20" uuid="2adf10c7-3aae-410b-943e-eb241d00d68e">
+					<reportElement positionType="Float" stretchType="ElementGroupHeight" mode="Transparent"
+								   style="TableHeader"
+								   x="0" y="150" width="185" height="20" uuid="2adf10c7-3aae-410b-943e-eb241d00d68e">
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
 					<text><![CDATA[Наименование ОА]]></text>
@@ -56,7 +54,9 @@
 
 			<elementGroup>
 				<staticText>
-					<reportElement positionType="Float" stretchType="ElementGroupHeight" mode="Transparent" x="0" y="180" width="185" height="20" uuid="a0587a76-c6bc-435e-8bb3-46aa6861bf21">
+					<reportElement positionType="Float" stretchType="ElementGroupHeight" mode="Transparent"
+								   style="TableHeader"
+								   x="0" y="180" width="185" height="20" uuid="a0587a76-c6bc-435e-8bb3-46aa6861bf21">
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
 					<text><![CDATA[Организатор]]></text>
@@ -71,7 +71,9 @@
 
 			<elementGroup>
 				<staticText>
-					<reportElement positionType="Float" stretchType="ElementGroupHeight" mode="Transparent" x="0" y="210" width="185" height="20" uuid="5b9c15ab-90c4-47b0-8cfa-49badb86a7f7">
+					<reportElement positionType="Float" stretchType="ElementGroupHeight" mode="Transparent"
+								   style="TableHeader"
+								   x="0" y="210" width="185" height="20" uuid="5b9c15ab-90c4-47b0-8cfa-49badb86a7f7">
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
 					<text><![CDATA[Категории]]></text>
@@ -85,10 +87,9 @@
 			</elementGroup>
 
 			<staticText>
-				<reportElement positionType="FixRelativeToBottom" x="0" y="240" width="552" height="20" uuid="294740b5-d272-44ac-85bf-712c9e7ed88d"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
+				<reportElement positionType="FixRelativeToBottom"
+							   style="BlockHeader"
+							   x="0" y="240" width="552" height="20" uuid="294740b5-d272-44ac-85bf-712c9e7ed88d"/>
 				<text><![CDATA[Выдать аккредитацию следующим поставщикам:]]></text>
 			</staticText>
 		</band>
@@ -97,31 +98,23 @@
 	<columnHeader>
 		<band height="50">
 			<staticText>
-				<reportElement x="0" y="20" width="40" height="30"/>
-				<textElement textAlignment="Center" verticalAlignment="Top">
-					<font isBold="true"/>
-				</textElement>
+				<reportElement style="TableHeader" x="0" y="20" width="40" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
 				<text><![CDATA[№]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="40" y="20" width="200" height="30"/>
-				<textElement textAlignment="Center" verticalAlignment="Top">
-					<font isBold="true"/>
-				</textElement>
+				<reportElement style="TableHeader" x="40" y="20" width="200" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
 				<text><![CDATA[Контрагент]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="240" y="20" width="100" height="30"/>
-				<textElement textAlignment="Center" verticalAlignment="Top">
-					<font isBold="true"/>
-				</textElement>
+				<reportElement style="TableHeader" x="240" y="20" width="100" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
 				<text><![CDATA[Инн]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="340" y="20" width="200" height="30"/>
-				<textElement textAlignment="Center" verticalAlignment="Top">
-					<font isBold="true"/>
-				</textElement>
+				<reportElement style="TableHeader" x="340" y="20" width="200" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
 				<text><![CDATA[Контактное лицо]]></text>
 			</staticText>
 		</band>
@@ -152,10 +145,6 @@
 	</detail>
 	<pageFooter>
 		<band height="20" splitType="Stretch">
-<!--			<textField>-->
-<!--				<reportElement x="0" y="0" width="558" height="20" uuid="cc72ed8a-1f1c-4365-a07c-be41a3e20899"/>-->
-<!--				<textFieldExpression><![CDATA[$P{CREATED_BY}]]></textFieldExpression>-->
-<!--			</textField>-->
 			<textField>
 				<reportElement x="420" y="0" width="100" height="20" uuid="01b2a1a3-c8be-43b7-965f-eb86024a72bf"/>
 				<textElement textAlignment="Right"/>
@@ -171,7 +160,7 @@
 	<lastPageFooter>
 		<band height="20" splitType="Stretch">
 			<textField>
-				<reportElement x="0" y="0" width="558" height="20"/>
+				<reportElement style="BlockHeader" x="0" y="0" width="558" height="20"/>
 				<textFieldExpression><![CDATA[$P{CREATED_BY}]]></textFieldExpression>
 			</textField>
 			<textField>
@@ -190,14 +179,13 @@
 		<band height="350" splitType="Prevent">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<staticText>
-				<reportElement x="0" y="50" width="185" height="20" uuid="e167d658-5172-4937-bf73-f9c941a0bd5c"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
+				<reportElement style="BlockHeader" x="0" y="50" width="185" height="20" uuid="e167d658-5172-4937-bf73-f9c941a0bd5c"/>
 				<text><![CDATA[Дополнительно]]></text>
 			</staticText>
 			<staticText>
-				<reportElement positionType="Float" stretchType="ElementGroupHeight" mode="Transparent" x="0" y="70" width="185" height="20" uuid="08d3eaa5-70e5-48d2-adc6-fa0ff6477d48">
+				<reportElement positionType="Float" stretchType="ElementGroupHeight" mode="Transparent"
+							   style="TableHeader"
+							   x="0" y="70" width="185" height="20" uuid="08d3eaa5-70e5-48d2-adc6-fa0ff6477d48">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<text><![CDATA[Порядок оплаты]]></text>
@@ -207,7 +195,8 @@
 				<textFieldExpression><![CDATA[$P{PAYMENT}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement positionType="Float" x="0" y="90" width="185" height="30" uuid="2b6f86ba-829a-4a08-aaca-0e8f01c64641">
+				<reportElement positionType="Float" style="TableHeader"
+							   x="0" y="90" width="185" height="30" uuid="2b6f86ba-829a-4a08-aaca-0e8f01c64641">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<text><![CDATA[Критерии выбора победителя]]></text>
@@ -219,7 +208,9 @@
 				<textFieldExpression><![CDATA[$P{WINNER_SELECTION_CRITERIA}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement positionType="Float" stretchType="ElementGroupHeight" mode="Transparent" x="0" y="130" width="185" height="20" uuid="8de68652-c545-4df0-ae6d-fc2dcf1042ed">
+				<reportElement positionType="Float" stretchType="ElementGroupHeight" mode="Transparent"
+							   style="TableHeader"
+							   x="0" y="130" width="185" height="20" uuid="8de68652-c545-4df0-ae6d-fc2dcf1042ed">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<text><![CDATA[Бюджет]]></text>
@@ -231,7 +222,9 @@
 				<textFieldExpression><![CDATA[$P{BUDGET}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement positionType="Float" stretchType="ElementGroupHeight" mode="Transparent" x="0" y="150" width="185" height="20" uuid="4b5c5858-1317-4b97-95f2-2ff184f99bbf">
+				<reportElement positionType="Float" stretchType="ElementGroupHeight" mode="Transparent"
+							   style="TableHeader"
+							   x="0" y="150" width="185" height="20" uuid="4b5c5858-1317-4b97-95f2-2ff184f99bbf">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<text><![CDATA[Валюта]]></text>
@@ -243,7 +236,8 @@
 				<textFieldExpression><![CDATA[$P{CURRENCY}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement positionType="Float" x="0" y="170" width="185" height="30" uuid="f74b245d-175e-471b-9f42-b77beb27f929">
+				<reportElement positionType="Float" style="TableHeader"
+							   x="0" y="170" width="185" height="30" uuid="f74b245d-175e-471b-9f42-b77beb27f929">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<text><![CDATA[Сделка с валютной составляющей]]></text>
@@ -255,7 +249,9 @@
 				<textFieldExpression><![CDATA[$P{IS_FOREIGN_CURRENCY}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement positionType="Float" stretchType="ElementGroupHeight" mode="Transparent" x="0" y="210" width="185" height="20" uuid="68050919-5269-425f-ac4a-01025dba322e">
+				<reportElement positionType="Float" stretchType="ElementGroupHeight" mode="Transparent"
+							   style="TableHeader"
+							   x="0" y="210" width="185" height="20" uuid="68050919-5269-425f-ac4a-01025dba322e">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<text><![CDATA[Комментарий]]></text>
