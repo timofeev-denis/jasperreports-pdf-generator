@@ -21,11 +21,11 @@
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<elementGroup>
 				<image>
-					<reportElement x="0" y="0" width="50" height="50" uuid="e37c3ef3-010c-482b-965e-a48565d5736d"/>
-					<imageExpression><![CDATA["report_logo.png"]]></imageExpression>
+					<reportElement x="20" y="0" width="134" height="32" uuid="e37c3ef3-010c-482b-965e-a48565d5736d"/>
+					<imageExpression><![CDATA["tenders_logo.png"]]></imageExpression>
 				</image>
 				<textField isBlankWhenNull="true">
-					<reportElement style="ReportHeader" x="0" y="70" width="570" height="60" uuid="8e28dd43-c5b6-46a7-aff2-e52c32250ee3"/>
+					<reportElement style="ReportHeader" x="0" y="50" width="570" height="60" uuid="8e28dd43-c5b6-46a7-aff2-e52c32250ee3"/>
 					<textElement textAlignment="Left" verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA[$P{REPORT_TITLE}]]></textFieldExpression>
 				</textField>
@@ -110,7 +110,7 @@
 			<staticText>
 				<reportElement style="TableHeader" x="240" y="20" width="100" height="30"/>
 				<textElement textAlignment="Center" verticalAlignment="Top"/>
-				<text><![CDATA[Инн]]></text>
+				<text><![CDATA[ИНН]]></text>
 			</staticText>
 			<staticText>
 				<reportElement style="TableHeader" x="340" y="20" width="200" height="30"/>
@@ -124,7 +124,7 @@
 			<textField textAdjust="StretchHeight">
 				<reportElement x="0" y="0" width="40" height="30"/>
 				<textElement textAlignment="Center" verticalAlignment="Top"/>
-				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight">
 				<reportElement x="40" y="0" width="200" height="30"/>

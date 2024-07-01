@@ -4,4 +4,7 @@
     <fontFamily name="DejaVuSans">
         <normal>fonts/DejaVuSans.ttf</normal>
     </fontFamily>
+    <fontFamily name="MtsWide">
+        <normal>fonts/MTSWide-Medium.ttf</normal>
+    </fontFamily>
 </fontFamilies>
